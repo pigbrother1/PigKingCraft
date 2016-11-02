@@ -23,9 +23,8 @@ end
 local function showStartWindow(inst, player)
 	print("name:"..player.name)
 	if player 
-	--and player.components.pkc_group 
-	--and player.components.pkc_group:getChoosen() ~= true		
-	and player.hasChoosen:value() == 0		--这个变量初值为0 
+	and player.components.pkc_group 
+	and player.components.pkc_group:getChoosen() ~= true 
 	then --未选择过阵营时执行
 		makePlayerInvincible(player)
 		local pkc_introduction_screen = require "screens/pkc_introduction_screen"
