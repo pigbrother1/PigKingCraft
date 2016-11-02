@@ -4,6 +4,7 @@
 --@date 2016-10-23
 --@大猪猪 10-31
 
+--
 local function onhasChoosen(self,v)
 	self.inst.hasChoosen:set(v)
 end
@@ -24,7 +25,7 @@ function PKC_GROUP:setChoosen(hasChoosen)
 end
 
 function PKC_GROUP:getChoosen()
-	return self.inst.hasChoosen
+	return self.hasChoosen
 end
 
 function PKC_GROUP:OnSave()
