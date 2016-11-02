@@ -118,11 +118,12 @@ end
 --选择后进入基地
 --@大猪猪 10-31
 function PauseScreen:chooseGroup(group_id)
-	if ThePlayer then 
+	if ThePlayer then
+		--[[
 		if not ThePlayer.components.pkc_group then
 			ThePlayer:AddComponent("pkc_group")
 		end
-		ThePlayer.components.pkc_group:setChoosen(group_id)
+		ThePlayer.components.pkc_group:setChoosen(group_id)]]
 		
 		teleportToBase(ThePlayer, group_id)
 		self:unpause()
