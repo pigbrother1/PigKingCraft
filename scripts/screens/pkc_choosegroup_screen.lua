@@ -101,22 +101,32 @@ local function cnancleInvincible(player, delay_time)
 end
 
 --选择阵营势力
+--选择后进入基地
+--@大猪猪 10-31
 function PauseScreen:chooseGroup(group_id)
 	if ThePlayer  then 
 		if not ThePlayer.components.pkc_group then
 			ThePlayer:AddComponent("pkc_group")
 		end
 		--标记已选择阵营
-		ThePlayer.components.pkc_group:setChoosen(true)
+		ThePlayer.components.pkc_group:setChoosen(group_id)
 		cnancleInvincible(ThePlayer, 5)
 	end
-	if GROUP_BIGPIG_ID == group_id then
+	if GROUP_BIGPIG_ID == group_id then		--大猪猪
 		--TODO 选择阵营之后的操作，记录选择的阵营并传送至对应基地
-
+		--ThePlayer.Transform:SetPosition( TheWorld.GROUP_BIGPIG_POS_x:value(),0,TheWorld.GROUP_BIGPIG_POS_z:value())
 		self:unpause()
-	elseif GROUP_REDPIG_ID == group_id then
+	elseif GROUP_REDPIG_ID == group_id then		--红猪猪
 		--TODO 选择阵营之后的操作，记录选择的阵营并传送至对应基地
-		
+		--ThePlayer.Transform:SetPosition( TheWorld.GROUP_REDPIG_POS_x:value(),0,TheWorld.GROUP_REDPIG_POS_z:value() )
+		self:unpause()
+	elseif GROUP_REDPIG_ID == group_id then		--龙猪猪
+		--TODO 选择阵营之后的操作，记录选择的阵营并传送至对应基地
+		--ThePlayer.Transform:SetPosition( TheWorld.GROUP_LONGPIG_POS_x:value(),0,TheWorld.GROUP_LONGPIG_POS_z:value() )
+		self:unpause()
+	elseif GROUP_REDPIG_ID == group_id then		--崔猪猪
+		--TODO 选择阵营之后的操作，记录选择的阵营并传送至对应基地
+		--ThePlayer.Transform:SetPosition( TheWorld.GROUP_CUIPIG_POS_x:value(),0,TheWorld.GROUP_CUIPIG_POS_z:value() )
 		self:unpause()
 	end
 end
