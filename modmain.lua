@@ -2,18 +2,13 @@
 --@description MOD入口
 --@auther 大猪猪，RedPig
 --@date 2016-10-23
-
-local TheNet = GLOBAL.TheNet
-local SpawnPrefab = GLOBAL.SpawnPrefab
-local TheWorld = GLOBAL.TheWorld
-local Point = GLOBAL.Point
-local require = GLOBAL.require
-local IsServer = TheNet:GetIsServer()
-
+--test1234
 PrefabFiles = {
-
+"pkc_bigpig",
+"pkc_redpig",
 }
 
+local require = GLOBAL.require
 --自定义工具函数（常用的工具函数放这里）
 require "pkc_utils" 
 --全局变量（全局变量放这里）
